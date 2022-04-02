@@ -9,11 +9,6 @@ pipeline {
                 
         }
     }
-    node ('main'){
-    stage 'Checkout'
-    checkout scm
-    stage "Build Pex"
-    sh('dipak.sh')
-}
+ 
 }
 }
