@@ -1,3 +1,3 @@
 #bin/bash/
 
-echo "dipak.sh"
+echo "from vdafsddipak.sh"
