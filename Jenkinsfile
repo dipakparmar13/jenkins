@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                sh 'pwd'
-               sh './diapk.sh'
+               sh 'diapk.sh'
                 
         }
     }
