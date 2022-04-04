@@ -8,7 +8,7 @@ pipeline {
       steps {
        echo "iiiiiiiiiiiiiiiiii"
         git branch: "main",
-          url: 'github.com/dipakparmar13/jenkins.git'
+          url: 'https://github.com/dipakparmar13/jenkins.git'
                echo "2222222222222222"
       }
     }
