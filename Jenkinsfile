@@ -20,7 +20,7 @@ pipeline {
                 dir(''){
                          echo "33333333333333"
 
-                    pwd(); //Log current directory
+                    pwd
 
                     withAWS(region:'us-east-1',credentials:'261812b3-48e5-4509-b751-5368c1a4ba58') {
                               echo "44444444444444444444"
