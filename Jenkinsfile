@@ -19,17 +19,21 @@ pipeline {
 
                 dir(''){
                          echo "33333333333333"
-                 withCredentials([usernamePassword(credentialsId: 'AWS-SCRET', accessKeyVariable: '$AWS_ACCESS_KEY_ID', secretKeyVariable: '$AWS_SECRET_ACCESS_KEY')]) {
+                 withCredentials([usernamePassword(credentialsId: 'AWS-SCRET', accessKeyVariable: '$AWS_ACCESS_KEY_ID', secretKeyVariable: '$AWS_SECRET_ACCESS_KEY')])
+                 
+                    echo "44444444444444444444"
+                  {
                 sh 'echo $AWS_ACCESS_KEY_ID'
                 sh 'echo $AWS_SECRET_ACCESS_KEY' {
                    
                   
                     echo "44444444444444444444"
-                        def identity=awsIdentity();//Log AWS credentials
-                               echo "555555555555555"
-                        // Upload files from working directory '' in your project workspace
+
+                      
                         s3Upload(bucket:"productionbranch", workingDir:'', includePathPattern:'**/*');
-                        // invalidate CloudFront distribution
+
+                        echo "555555555555555"
+                    
                         cfInvalidate(distribution:'EY8I35Z7WXLW6', paths:['/*'])
                     }
 
