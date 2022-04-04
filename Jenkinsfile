@@ -1,5 +1,5 @@
 pipeline {
-    agent ('self')
+    node ('self')
     parameters {
         string(name: 'NAME', description: 'Please tell me your name?')
  
