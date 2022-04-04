@@ -6,8 +6,10 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
+       echo "iiiiiiiiiiiiiiiiii"
         git branch: "main",
           url: 'github.com/dipakparmar13/jenkins.git'
+               echo "2222222222222222"
       }
     }
 
@@ -16,11 +18,12 @@ pipeline {
             script {
 
                 dir(''){
+                         echo "33333333333333"
 
                     pwd(); //Log current directory
 
                     withAWS(region:'us-east-1',credentials:'261812b3-48e5-4509-b751-5368c1a4ba58') {
-
+                              echo "44444444444444444444"
                         def identity=awsIdentity();//Log AWS credentials
 
                         // Upload files from working directory '' in your project workspace
