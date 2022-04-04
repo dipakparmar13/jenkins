@@ -19,8 +19,8 @@ pipeline {
 
                 dir(''){
                          echo "33333333333333"
-                    withAWS(region:'us-east-1',credentials:'AKIA4CWKJZPJJ3CIKOKY') {
-                              echo "44444444444444444444"
+                   withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
+                    echo "44444444444444444444"
                         def identity=awsIdentity();//Log AWS credentials
                                echo "555555555555555"
                         // Upload files from working directory '' in your project workspace
