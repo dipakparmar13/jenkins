@@ -19,7 +19,9 @@ pipeline {
 
                 dir(''){
                          echo "33333333333333"
-                   withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
+                withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
+                 // some block
+}
                     echo "44444444444444444444"
                         def identity=awsIdentity();//Log AWS credentials
                                echo "555555555555555"
