@@ -19,7 +19,7 @@ pipeline {
 
                 dir(''){
                          echo "33333333333333"
-                 withCredentials([usernamePassword(credentialsId: 'AWS-SCRET', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                 withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>][usernamePassword(credentialsId: 'AWS-SCRET', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                 sh 'echo $AWS_ACCESS_KEY_ID'
                 sh 'echo $AWS_SECRET_ACCESS_KEY' {
                    
