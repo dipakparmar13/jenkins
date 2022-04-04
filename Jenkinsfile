@@ -19,10 +19,7 @@ pipeline {
 
                 dir(''){
                          echo "33333333333333"
-
-                    pwd
-
-                    withAWS(region:'us-east-1',credentials:'261812b3-48e5-4509-b751-5368c1a4ba58') {
+                    withAWS(region:'us-east-1',credentials:'AKIA4CWKJZPJJ3CIKOKY') {
                               echo "44444444444444444444"
                         def identity=awsIdentity();//Log AWS credentials
                                echo "555555555555555"
