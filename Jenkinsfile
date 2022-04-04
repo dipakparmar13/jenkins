@@ -1,11 +1,8 @@
-pipeline {
-    agent self
-
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
+node("myAgent") {
+    timeout(unit: 'SECONDS', time: 5) {
+        stage("One"){
+            sleep 10
+            echo 'hello'
         }
     }
 }
